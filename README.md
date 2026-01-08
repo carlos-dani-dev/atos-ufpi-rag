@@ -1,9 +1,10 @@
 # 🧠 Atos-UFPI-RAG
 
-**Atos-UFPI-RAG** é uma implementação em Python de um sistema de **RAG (Retrieval-Augmented Generation)** que permite realizar consultas inteligentes em dados textuais, combinando **recuperação de informações** com **geração de respostas** por meio de modelos de linguagem.
+**Atos-UFPI-RAG** é uma implementação em Python de um sistema de **RAG (Retrieval-Augmented Generation)** que permite realizar consultas inteligentes em dados textuais em pdf de atos normativos da UFPI de 2025, combinando **recuperação de informações** com **geração de respostas** por meio de modelos de linguagem.
 
 Este projeto organiza os principais componentes de um pipeline RAG completo, incluindo preparação de dados, vetorização/embedding e interface de chat.
 
+O projeto se encontra atualmente em fase de execução local para testes e apresentação do funcionamento da interface como projeto final da disciplina de Tópicos em Inteligência Artificial em sala de aula.
 ---
 
 ## 🚀 Funcionalidades
