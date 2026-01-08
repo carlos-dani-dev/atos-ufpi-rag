@@ -1,4 +1,4 @@
-  # Ato 1
+# Ato 1
 Numero do ato: 569.0
 Data do ato: 4/1/2025
 Envolvido(s) no ato: VÁRIOS
