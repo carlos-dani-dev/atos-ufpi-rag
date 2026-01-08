@@ -55,10 +55,16 @@ pip install -r requirements.txt
 
 ### 📌 1. Preparar os dados
 
-Coloque seus arquivos de texto ou outra fonte de dados na pasta `data_prep` e execute o script apropriado para limpar e organizar os textos antes de criar os embeddings.
+Execute em ordem os seguintes arquivos para limpar e organizar os textos antes de criar os embeddings.
 
 ```bash
-python data_prep/seu_script_de_preparacao.py
+python data_prep/atos_scrapper.py
+```
+```bash
+python data_prep/atos_to_csv.py
+```
+```bash
+python data_prep/to_md.py
 ```
 
 ### 📌 2. Criar Embeddings
