@@ -41,6 +41,8 @@ streamlit run app.py
 
 Acesse http://localhost:8000/ e verifique se a aplicação está rodando corretamente.
 
+---
+
 ### Informações importantes sobre a aplicação
 
 <p>Abaixo, veja o pipeline detalhado de todo o RAG.</p>
