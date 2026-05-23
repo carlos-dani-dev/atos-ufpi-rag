@@ -1,8 +1,8 @@
 # RAG de atos normativos da UFPI
 
-<p>Atos normativos são documentos que regulamentam, instruem e padronizam o funcionamento das atividades da Universidade Federal. Eles são publicados ao decorrer do tempo e podem
-tratar os mais variados assuntos. O RAG desenvolvido neste repositório utiliza os modelos de IA generativa mais famosos para responder à perguntas sob contexto.
-Veja um exemplo de ato normativo abaixo:</p>
+<p>Atos normativos são documentos que regulamentam, instruem e padronizam o funcionamento das atividades da Universidade Federal.</p>
+<p>Eles são publicados ao decorrer do tempo e podem tratar os mais variados assuntos. O RAG desenvolvido neste repositório utiliza os modelos de IA generativa mais famosos para responder à perguntas sob contexto.</p>
+<p>Veja um exemplo de ato normativo abaixo:</p>
 <p align="center"><img width="756" height="234" alt="image" src="https://github.com/user-attachments/assets/270a663e-80ff-4f4b-8e3c-f92e1b37fad9" /></p>
 
 ### Tecnologias Utilizadas
@@ -33,7 +33,7 @@ Após isso, siga os passos a seguir:</p>
 cd ./atos-ufpi-rag
 ```
 
-<p>Depois disso, rode a aplicação streamlit com o comando abaixo</p>
+<p>Depois disso, rode a aplicação streamlit com o comando abaixo: </p>
 
 ```
 streamlit run app.py
