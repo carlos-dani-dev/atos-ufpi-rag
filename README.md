@@ -57,7 +57,7 @@ o system prompt que será enviado às IA's generativas por meio da API do OpenRo
 
 ### Problemas enfrentados
 
-##### Principal problema da aplicação:
+#### Principal problema da aplicação:
 Qual o ponto ótimo de separação do texto base?
 Inicialmente vetorizamos batches de tamanho fixo, o que prejudicava o processo de recuperação dos batches por semelhança e retornava um contexto inútil para a IA generativa explorar.
-* Como solucionar: O tamanho de cada batch passou a ser variável, a depender exclusivamente do tamanho do ato normativo que ele comporta. Além disso, misturamos busca semântica com busca lexical, em caso de busca exata por números de processo e identificadores pessoais.
+#### Como solucionamos: O tamanho de cada batch passou a ser variável, a depender exclusivamente do tamanho do ato normativo que ele comporta. Além disso, misturamos busca semântica com busca lexical, em caso de busca exata por números de processo e identificadores pessoais.
