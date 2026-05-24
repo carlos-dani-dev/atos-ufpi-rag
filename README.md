@@ -1,7 +1,9 @@
 # RAG para atos normativos da UFPI
 
+
 <p>Atos normativos são documentos que regulamentam, instruem e padronizam o funcionamento das atividades da Universidade Federal.<br>
-Eles são publicados ao decorrer do tempo e podem tratar os mais variados assuntos. O RAG desenvolvido neste repositório utiliza os modelos de IA generativa mais famosos para responder à perguntas sob contexto.<br>Veja um exemplo de ato normativo abaixo:</p>
+Eles são publicados ao decorrer do tempo e podem tratar os mais variados assuntos. O RAG desenvolvido neste repositório utiliza os modelos de IA generativa mais famosos para responder à perguntas sob contexto.</p>
+<p>Veja um exemplo de ato normativo abaixo:</p>
 
 | Nº | Data | Envolvido | Descrição |
 | :--- | :--- | :--- | :--- |
@@ -9,12 +11,56 @@ Eles são publicados ao decorrer do tempo e podem tratar os mais variados assunt
 
 ### Tecnologias Utilizadas
 
-* [Python](https://www.python.org/) : A linguagem base de todo o projeto.
-* [Streamlit](https://streamlit.io/) : Framework python para crianção da interface gráfica.
-* [OpenRouter](https://openrouter.ai/) : Plataforma usada para centralização do acesso às IA's generativas.
-* [Langchain](https://www.langchain.com/) : Framework python que sistematiza tanto a produção dos prompts, como a separação do texto base em markdown para posterior vetorização.
-* [SenteceTransformers](https://sbert.net/) : Framework python utilizado para o chamamento do modelo que realiza a vetorização do texto base separado.
-
+<table>
+    <tr>
+        <td>
+            <strong>Ferramenta</strong>
+        </td>
+        <td>
+            <strong>Descrição do uso</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://www.python.org/" target="_blank">Python</a>
+        </td>
+        <td>
+            A linguagem base de todo o projeto.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://streamlit.io/" target="_blank">Streamlit</a>
+        </td>
+        <td>
+            Framework Python para criação da interface gráfica.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://openrouter.ai/" target="_blank">OpenRouter</a>
+        </td>
+        <td>
+            Plataforma usada para centralização do acesso às IAs generativas.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://www.langchain.com/" target="_blank">Langchain</a>
+        </td>
+        <td>
+            Framework Python que sistematiza tanto a produção dos prompts, como a separação do texto base em markdown para posterior vetorização.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://sbert.net/" target="_blank">SentenceTransformers</a>
+        </td>
+        <td>
+            Framework Python utilizado para o chamamento do modelo que realiza a vetorização do texto base separado.
+        </td>
+    </tr>
+</table>
 
 ### Dependências e Versões Necessárias
 
@@ -48,18 +94,32 @@ Acesse http://localhost:8000/ e verifique se a aplicação está rodando correta
 ### Informações importantes sobre a aplicação
 
 <p>Abaixo, veja o pipeline detalhado de todo o RAG.</p>
-<p>A primeira etapa é a preparação dos dados, que envolve o webscrapping dos atos normativos via script python e salvamento em arquivo csv intermediário. Este arquivo
+<p>1) A primeira etapa é a preparação dos dados, que envolve o webscrapping dos atos normativos via script python e salvamento em arquivo csv intermediário. Este arquivo
 intermediário é lido e transformado em um arquivo de texto base .txt em formato markdown.</p>
-<p>Após isso, o laboratório colab invoca o SentenceTransformer e vetoriza o arquivo .txt em formato markdown, ato por ato. O resultado desse processo é uma pasta zipada
+<p>2) Após isso, o laboratório colab invoca o SentenceTransformer e vetoriza o arquivo .txt em formato markdown, ato por ato. O resultado desse processo é uma pasta zipada
 com o Faiss Index (dataset vetorizado nativo da Meta, otimizado para buscas por proximidade).</p>
-<p>A etapa final é a busca por semelhança da pergunta vetorizada dentro do dataset vetorizado resultante da etapa anterior. Os atos normativos mais semelhantes compõem
+<p>3) A etapa final é a busca por semelhança da pergunta vetorizada dentro do dataset vetorizado resultante da etapa anterior. Os atos normativos mais semelhantes compõem
 o system prompt que será enviado às IA's generativas por meio da API do OpenRouter. A resposta é exibida ao usuário.</p>
 
 <p align="center"><img width="5901" height="2157" alt="image" src="https://github.com/user-attachments/assets/feea077f-f79c-4f70-a21c-79858ddb49ac" /></p>
 
 ### Problemas enfrentados
 
-#### Principal problema da aplicação:
-Qual o ponto ótimo de separação do texto base?
+<table>
+  <tr>
+    <td>
+      <strong>Principal problema da aplicação:</strong>
+    </td>
+    <td>
+      Qual o ponto ótimo de separação do texto base?
 Inicialmente vetorizamos batches de tamanho fixo, o que prejudicava o processo de recuperação dos batches por semelhança e retornava um contexto inútil para a IA generativa explorar.
-#### Como solucionamos: O tamanho de cada batch passou a ser variável, a depender exclusivamente do tamanho do ato normativo que ele comporta. Além disso, misturamos busca semântica com busca lexical, em caso de busca exata por números de processo e identificadores pessoais.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Como solucionamos:</strong>
+    </td>
+    <td>O tamanho de cada batch passou a ser variável, a depender exclusivamente do tamanho do ato normativo que ele comporta. Além disso, misturamos busca semântica com busca lexical, em caso de busca exata por números de processo e identificadores pessoais.
+    </td>
+  </tr>
+</table>
