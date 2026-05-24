@@ -1,9 +1,11 @@
-# RAG de atos normativos da UFPI
+# RAG para atos normativos da UFPI
 
-<p>Atos normativos são documentos que regulamentam, instruem e padronizam o funcionamento das atividades da Universidade Federal.</p>
-<p>Eles são publicados ao decorrer do tempo e podem tratar os mais variados assuntos. O RAG desenvolvido neste repositório utiliza os modelos de IA generativa mais famosos para responder à perguntas sob contexto.</p>
-<p>Veja um exemplo de ato normativo abaixo:</p>
-<p align="center"><img width="756" height="234" alt="image" src="https://github.com/user-attachments/assets/270a663e-80ff-4f4b-8e3c-f92e1b37fad9" /></p>
+<p>Atos normativos são documentos que regulamentam, instruem e padronizam o funcionamento das atividades da Universidade Federal.<br>
+Eles são publicados ao decorrer do tempo e podem tratar os mais variados assuntos. O RAG desenvolvido neste repositório utiliza os modelos de IA generativa mais famosos para responder à perguntas sob contexto.<br>Veja um exemplo de ato normativo abaixo:</p>
+
+| Nº | Data | Envolvido | Descrição |
+| :--- | :--- | :--- | :--- |
+| 663 | 5/4/2026 | PAD | **Processo nº 23111.004938/2024-03**<br><br>1. Reconduzir a Comissão de Processo Administrativo Disciplinar de Rito Ordinário, constituída pelo Ato da Reitoria n.º 2400/25, de 29/12/2025, publicado no Boletim de Serviço Especial em 05/01/2026, para, no prazo de 60 (sessenta) dias, continuar a apuração de possíveis irregularidades sobre as quais versam os autos do Processo n.º 23111. 23111.004938/2024-03;<br><br>2. Os servidores designados ficam dispensados de suas atividades funcionais nos horários em que se dedicarão à realização dos trabalhos da Comissão, nos termos do § 1° do artigo 152 da Lei 8.112/90. |
 
 ### Tecnologias Utilizadas
 
@@ -53,7 +55,7 @@ com o Faiss Index (dataset vetorizado nativo da Meta, otimizado para buscas por 
 <p>A etapa final é a busca por semelhança da pergunta vetorizada dentro do dataset vetorizado resultante da etapa anterior. Os atos normativos mais semelhantes compõem
 o system prompt que será enviado às IA's generativas por meio da API do OpenRouter. A resposta é exibida ao usuário.</p>
 
-<img width="5901" height="2157" alt="image" src="https://github.com/user-attachments/assets/feea077f-f79c-4f70-a21c-79858ddb49ac" />
+<p align="center"><img width="5901" height="2157" alt="image" src="https://github.com/user-attachments/assets/feea077f-f79c-4f70-a21c-79858ddb49ac" /></p>
 
 ### Problemas enfrentados
 
