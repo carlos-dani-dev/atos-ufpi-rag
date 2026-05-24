@@ -2,7 +2,7 @@
 
 
 <p>Atos normativos são documentos que regulamentam, instruem e padronizam o funcionamento das atividades da Universidade Federal.<br>
-Eles são publicados ao decorrer do tempo e podem tratar os mais variados assuntos. O RAG desenvolvido neste repositório utiliza os modelos de IA generativa mais famosos para responder à perguntas sob contexto.</p>
+Eles são publicados ao decorrer do tempo e podem tratar dos mais variados assuntos. O RAG desenvolvido neste repositório utiliza os modelos de IA generativa mais famosos para responder à perguntas sob contexto.</p>
 <p>Veja um exemplo de ato normativo abaixo:</p>
 
 | Nº | Data | Envolvido | Descrição |
