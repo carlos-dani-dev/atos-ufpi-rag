@@ -40,7 +40,7 @@ Eles são publicados ao decorrer do tempo e podem tratar dos mais variados assun
         <td>
             <a href="https://www.selenium.dev/">Selenium</a>
         </td>
-        <td>Framework Python útil para webscrapping da página de internet que centraliza os atos normativos.</td>
+        <td>Framework Python ideal para webscrapping da página de internet que centraliza os atos normativos.</td>
     </tr>
     <tr>
         <td>
