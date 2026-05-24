@@ -38,6 +38,12 @@ Eles são publicados ao decorrer do tempo e podem tratar dos mais variados assun
     </tr>
     <tr>
         <td>
+            <a href="https://www.selenium.dev/">Selenium</a>
+        </td>
+        <td>Framework Python útil para webscrapping da página de internet que centraliza os atos normativos.</td>
+    </tr>
+    <tr>
+        <td>
             <a href="https://openrouter.ai/" target="_blank">OpenRouter</a>
         </td>
         <td>
@@ -95,7 +101,7 @@ Acesse http://localhost:8000/ e verifique se a aplicação está rodando correta
 
 <p>Abaixo, veja o pipeline detalhado de todo o RAG.</p>
 <p>1) A primeira etapa é a preparação dos dados, que envolve o webscrapping dos atos normativos via script python e salvamento em arquivo csv intermediário. Este arquivo
-intermediário é lido e transformado em um arquivo de texto base .txt em formato markdown.</p>
+intermediário é lido e transformado em um arquivo de texto base .txt com o conteúdo em formato markdown.</p>
 <p>2) Após isso, o laboratório colab invoca o SentenceTransformer e vetoriza o arquivo .txt em formato markdown, ato por ato. O resultado desse processo é uma pasta zipada
 com o Faiss Index (dataset vetorizado nativo da Meta, otimizado para buscas por proximidade).</p>
 <p>3) A etapa final é a busca por semelhança da pergunta vetorizada dentro do dataset vetorizado resultante da etapa anterior. Os atos normativos mais semelhantes compõem
